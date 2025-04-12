@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "top/leonx/irisflw/mixin/MixinLevelRender": {
+      "Lnet/minecraft/client/renderer/LevelRenderer;renderedEntities:I": "Lnet/minecraft/class_761;field_4089:I",
+      "renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V": "Lnet/minecraft/class_761;method_22710(Lnet/minecraft/class_4587;FJZLnet/minecraft/class_4184;Lnet/minecraft/class_757;Lnet/minecraft/class_765;Lorg/joml/Matrix4f;)V"
+    },
+    "top/leonx/irisflw/mixin/flw/vertex/MixinBufferBuilder": {
+      "begin": "Lnet/minecraft/class_287;method_1328(Lnet/minecraft/class_293$class_5596;Lnet/minecraft/class_293;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "top/leonx/irisflw/mixin/MixinLevelRender": {
+        "Lnet/minecraft/client/renderer/LevelRenderer;renderedEntities:I": "Lnet/minecraft/class_761;field_4089:I",
+        "renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V": "Lnet/minecraft/class_761;method_22710(Lnet/minecraft/class_4587;FJZLnet/minecraft/class_4184;Lnet/minecraft/class_757;Lnet/minecraft/class_765;Lorg/joml/Matrix4f;)V"
+      },
+      "top/leonx/irisflw/mixin/flw/vertex/MixinBufferBuilder": {
+        "begin": "Lnet/minecraft/class_287;method_1328(Lnet/minecraft/class_293$class_5596;Lnet/minecraft/class_293;)V"
+      }
+    }
+  }
+}

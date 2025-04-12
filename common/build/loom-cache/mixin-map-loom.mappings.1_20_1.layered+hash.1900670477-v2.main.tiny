@@ -1,0 +1,3 @@
+v1	named	intermediary
+FIELD	top/leonx/irisflw/mixin/MixinLevelRender	Lnet/minecraft/client/renderer/RenderBuffers;	renderBuffers	field_20951
+FIELD	top/leonx/irisflw/mixin/MixinLevelRender	Lnet/minecraft/client/multiplayer/ClientLevel;	level	field_4085

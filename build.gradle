@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.architectury.loom' version '1.6-SNAPSHOT' apply false
+    id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
@@ -43,6 +43,10 @@ subprojects {
         maven {
             url "https://maven.blamejared.com"
         }
+        maven {
+        name "createmod maven"
+        url "https://maven.createmod.net/"
+        }
     }
 
     loom {
@@ -59,7 +63,17 @@ subprojects {
             officialMojangMappings()
             parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
         }
-    }
+        // 使用 loom 的 modRuntimeOnly 和 modCompileOnly 替代 fg.deobf
+        modCompileOnly("dev.engine-room.flywheel:flywheel-forge-api-${minecraft_version}:${flywheel_version}") {
+        //isTransitive = false
+        //}
+        modRuntimeOnly("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}") {
+        //isTransitive = false
+        //}
+        // With loom
+        modApi "dev.engine-room.flywheel:flywheel-fabric-api-${minecraft_version}:${flywheel_version}"
+        modImplementation "dev.engine-room.flywheel:flywheel-fabric-${minecraft_version}:${flywheel_version}"
+    }}}
 
     java {
         // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task

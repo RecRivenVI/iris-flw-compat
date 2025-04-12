@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "irisflw",
+  "version": "1.1.4",
+
+  "name": "Iris Flywheel Compat",
+  "description": "Allow Flywheel instancing optimization to be enabled when using iris.",
+  "authors": [
+    "Leon"
+  ],
+  "contact": {
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/irisflw/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "top.leonx.irisflw.fabric.IrisFlwFabricClient"
+    ]
+  },
+  "mixins": [
+    "irisflw.mixins.flw.json",
+    "irisflw.mixins.iris.json",
+    "irisflw.mixins.fabric.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "iris": ">=1.7.0",
+    "flywheel": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
